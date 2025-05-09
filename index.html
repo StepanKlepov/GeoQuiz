@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/icons8-table-globe-96.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Geo Quiz</title>
+    <script src="index.js" defer></script>
+  </head>
+  <body class="body">
+    <header class="header">
+      <img class="header-logo" src="assets/img/earth-ball.png" alt="Globe" />
+    </header>
+    <main class="main">
+      <article class="question">
+        <h1 class="term"></h1>
+        <form id="form-options" class="answer-options">
+          <label class="answer-option">
+            <input
+              id="radio-option1"
+              type="radio"
+              name="answer-option"
+              checked
+            />
+            <span class="option-text"></span>
+          </label>
+          <label class="answer-option">
+            <input id="radio-option2" type="radio" name="answer-option" />
+            <span class="option-text"></span>
+          </label>
+          <label class="answer-option">
+            <input id="radio-option3" type="radio" name="answer-option" />
+            <span class="option-text"></span>
+          </label>
+          <label class="answer-option">
+            <input id="radio-option4" type="radio" name="answer-option" />
+            <span class="option-text"></span>
+          </label>
+          <div class="counter">
+            <p class="counter-text">
+              <span id="span-counter-current"></span> of
+              <span id="span-counter-total"></span>
+            </p>
+          </div>
+          <div class="buttons">
+            <button
+              id="button-submit"
+              class="button button-submit"
+              type="submit"
+            >
+              Submit
+            </button>
+            <button
+              id="button-next"
+              class="button button-next"
+              type="button"
+              disabled
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </article>
+      <dialog class="result-dialog" id="dialog-result">
+        <h2 class="result-title">Result</h2>
+        <p class="result-stats">
+          <span id="span-stats-correct"></span> of
+          <span id="span-stats-total"></span> correct (<span
+            id="span-stats-pct"
+          ></span
+          >%)
+        </p>
+        <button id="button-restart" class="button button-restart">
+          Start again
+        </button>
+      </dialog>
+    </main>
+    <footer class="footer">
+      <a
+        href="https://docs.google.com/spreadsheets/d/1PpktM8c3FflVhZIz_lvsuBFB_jQobWRWUY7sKahNUDI/edit?usp=sharing"
+        class="header-table"
+      >
+        Table with terms
+      </a>
+      <p class="footer-copyright">Stepan Klepov &copy; 2025</p>
+    </footer>
+  </body>
+</html>
